@@ -61,6 +61,13 @@ function renderSearchWord(array) {
     listElement.appendChild(searchItem);
   }
 }
+//input 자리수 제한
+function checkNumberLength(e) {
+  console.log(e.value, e.maxLength);
+  if (e.value.length > e.maxLength) {
+    e.value = e.value.slice(0, e.maxLength);
+  }
+}
 
 //숫자인지 확인하는 함수
 function checkStringNumber(num) {
@@ -97,15 +104,20 @@ function checkIdNumber(serialNumber) {
 
 //이벤트 함수
 document.getElementById("submit").addEventListener("click", function () {
-  let idNumber = document.getElementById("idNumber").value;
-  //   console.log(typeof idNumber);
+  let idNumber1 = document.getElementById("idNumber1").value;
+  let idNumber2 = document.getElementById("idNumber2").value;
+  console.log("----------------", idNumber1, idNumber2);
+  let idNumber = idNumber1 + idNumber2;
+  console.log(idNumber, typeof idNumber);
   if (checkIdNumber(idNumber)) {
-    alert("유효한 주민번호");
-    // api("/naver/realtime", "POST", idNumber);
     api("/naver/realtime", "GET");
+    document.getElementById("idNumber1").value = "";
+    document.getElementById("idNumber2").value = "";
   } else {
     alert("유효한 주민번호가 아닙니다.");
+    document.getElementById("idNumber1").value = "";
+    document.getElementById("idNumber2").value = "";
   }
 });
 
-//할 것 : input 리스트안나오게하기, 주민번호 앞자리 뒷자리 나누기, 뒷자리 안보이게처리(타입: password), 모듈로 나누기
+//할 것 : input 리스트안나오게하기, form으로 처리해보기(label도 확인), 모듈로 나누기
