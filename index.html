@@ -20,18 +20,21 @@
       <span> - </span>
       <input
         id="idNumber2"
-        type="password"
+        type="number"
         placeholder="주민번호 뒤 7자리 ex)1234567"
         maxlength="7"
         oninput="checkNumberLength(this)"
+        style="-webkit-text-security: square;"
       />
       <button id="submit" type="submit">Submit</button>
       <!-- </form> -->
     </header>
     <main>
-      <h2>실시간 검색어</h2>
+      <h2 class="searchWord_title" style="visibility: hidden;">
+        실시간 검색어
+      </h2>
       <ul id="searchWord_list"></ul>
     </main>
-    <script src="/g9_client/index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
