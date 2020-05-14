@@ -43,10 +43,8 @@ function api(url, method, data) {
 }
 //실시간 검색어 렌더
 function renderSearchWord(array) {
-  const searchTitle = document.querySelector(".searchWord_title");
-  searchTitle.style = "visibility: visible;";
   const listElement = document.getElementById("searchWord_list");
-  listElement.innerHTML = "";
+
   for (let i = 0; i < array.length; i++) {
     const searchItem = document.createElement("li");
     searchItem.className = "search_item";
@@ -64,15 +62,21 @@ function checkNumberLength(e) {
 }
 //이벤트 함수
 document.getElementById("submit").addEventListener("click", function () {
-  let idNumber1 = document.getElementById("idNumber1").value;
-  let idNumber2 = document.getElementById("idNumber2").value;
+  const searchTitle = document.querySelector(".searchWord_title");
+  searchTitle.style = "visibility: hidden;";
+  const listElement = document.getElementById("searchWord_list");
+  listElement.innerHTML = "";
+
+  const idNumber1 = document.getElementById("idNumber1").value;
+  const idNumber2 = document.getElementById("idNumber2").value;
   if (!(idNumber1 && idNumber2)) {
     alert("주민번호를 모두 입력해주세요");
   } else {
-    let idNumber = idNumber1 + idNumber2;
+    const idNumber = idNumber1 + idNumber2;
     //or  api(`/naver/realtime/${idNumber}`, "GET")
     api("/naver/realtime", "POST", idNumber)
       .then((res) => {
+        searchTitle.style = "visibility: visible;";
         console.log(res.message);
         renderSearchWord(res.data);
       })

@@ -7,38 +7,42 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header>
-      <h1>G9_TEST</h1>
-      <div>
-        <label
-          >주민번호입력:
-          <input
-            id="idNumber1"
-            type="number"
-            placeholder="생년월일 6자리 ex)901231"
-            maxlength="6"
-            oninput="checkNumberLength(this)"
-            autofocus
-          />
-          <span> - </span>
-          <input
-            id="idNumber2"
-            type="number"
-            placeholder="주민번호 뒤 7자리 ex)1234567"
-            maxlength="7"
-            oninput="checkNumberLength(this)"
-            style="-webkit-text-security: square;"
-          />
-        </label>
-        <button id="submit" type="submit">Submit</button>
-      </div>
-    </header>
-    <main>
-      <h2 class="searchWord_title" style="visibility: hidden;">
-        실시간 검색어
-      </h2>
-      <ul id="searchWord_list" style="list-style: none;"></ul>
-    </main>
+    <div id="container">
+      <header>
+        <div class="test_title">G9_TEST</div>
+        <div>
+          <label
+            >주민번호입력:
+            <input
+              id="idNumber1"
+              class="input_box"
+              type="number"
+              placeholder="생년월일 6자리 ex)901231"
+              maxlength="6"
+              oninput="checkNumberLength(this)"
+              autofocus
+            />
+            <span> - </span>
+            <input
+              id="idNumber2"
+              class="input_box"
+              type="number"
+              placeholder="주민번호 뒤 7자리 ex)1234567"
+              maxlength="7"
+              oninput="checkNumberLength(this)"
+              style="-webkit-text-security: square;"
+            />
+          </label>
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </header>
+      <main>
+        <h2 class="searchWord_title" style="visibility: hidden;">
+          실시간 검색어
+        </h2>
+        <ul id="searchWord_list" style="list-style: none;"></ul>
+      </main>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
