@@ -11,9 +11,9 @@ function api(url, method, data) {
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log("응답겟 ------------------------", res);
+        // console.log("응답겟 ------------------------", res);
         if (res.error) {
-          console.log("에러겟 ------------------------", res.error);
+          //   console.log("에러겟 ------------------------", res.error);
           return Promise.reject(res.error);
         } else {
           return res;
@@ -45,12 +45,13 @@ function api(url, method, data) {
 function renderSearchWord(array) {
   const searchTitle = document.querySelector(".searchWord_title");
   searchTitle.style = "visibility: visible;";
+  const listElement = document.getElementById("searchWord_list");
+  listElement.innerHTML = "";
   for (let i = 0; i < array.length; i++) {
-    const listElement = document.getElementById("searchWord_list");
     const searchItem = document.createElement("li");
     searchItem.className = "search_item";
     for (let key in array[i]) {
-      searchItem.innerHTML = `<span class='search_itemNum'>${key} </span><span class='serch_itemWord'> ${array[i][key]}</span>`;
+      searchItem.innerHTML = `<span class='search_itemNum'><strong>${key}</strong> </span><span class='serch_itemWord'> ${array[i][key]}</span>`;
     }
     listElement.appendChild(searchItem);
   }
@@ -65,19 +66,23 @@ function checkNumberLength(e) {
 document.getElementById("submit").addEventListener("click", function () {
   let idNumber1 = document.getElementById("idNumber1").value;
   let idNumber2 = document.getElementById("idNumber2").value;
-  let idNumber = idNumber1 + idNumber2;
-  //or  api(`/naver/realtime/${idNumber}`, "GET")
-  api("/naver/realtime", "POST", idNumber)
-    .then((res) => {
-      console.log(res.message);
-      renderSearchWord(res.data);
-    })
-    .catch((error) => {
-      console.log(`${error.message} : 에러코드 ${error.status}`);
-      alert(error.message);
-    });
-  document.getElementById("idNumber1").value = "";
-  document.getElementById("idNumber2").value = "";
+  if (!(idNumber1 && idNumber2)) {
+    alert("주민번호를 모두 입력해주세요");
+  } else {
+    let idNumber = idNumber1 + idNumber2;
+    //or  api(`/naver/realtime/${idNumber}`, "GET")
+    api("/naver/realtime", "POST", idNumber)
+      .then((res) => {
+        console.log(res.message);
+        renderSearchWord(res.data);
+      })
+      .catch((error) => {
+        console.log(`${error.message} : 에러코드 ${error.status}`);
+        alert(error.message);
+      });
+    document.getElementById("idNumber1").value = "";
+    document.getElementById("idNumber2").value = "";
+  }
 });
 
-//할 것 : form으로 처리해보기(label도 확인)
+//할 것 : 에러 처리 다시확인, 그리드로 스타일링, form으로 처리해보기(label도 확인)

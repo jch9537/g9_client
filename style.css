@@ -1,0 +1,12 @@
+body {
+  background: lightgrey;
+  display: grid;
+}
+
+header {
+  background: beige;
+}
+
+main {
+  background: pink;
+}
