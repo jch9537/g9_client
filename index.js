@@ -49,7 +49,7 @@ function renderSearchWord(array) {
     const searchItem = document.createElement("li");
     searchItem.className = "search_item";
     for (let key in array[i]) {
-      searchItem.innerHTML = `<span class='search_itemNum'><strong>${key}</strong> </span><span class='serch_itemWord'> ${array[i][key]}</span>`;
+      searchItem.innerHTML = `<div class='search_itemNum'><strong>${key}</strong> </div><div class='serch_itemWord'> ${array[i][key]}</div>`;
     }
     listElement.appendChild(searchItem);
   }
