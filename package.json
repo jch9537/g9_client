@@ -11,9 +11,5 @@
     "url": "git+https://github.com/jch9537/g9_client.git"
   },
   "author": "jungchihoon",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jch9537/g9_client/issues"
-  },
-  "homepage": "https://github.com/jch9537/g9_client#readme"
+  "license": "ISC"
 }
