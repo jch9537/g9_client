@@ -2,7 +2,7 @@
 
 ### 테스트 과제 클라이언트
 
-CLIENT URI : http://localhost:5500/g9_client/<br/>
+CLIENT URI : https://jch9537.github.io/g9_client//<br/>
 주민번호 유효성 확인 후 네이버 실시간 검색어 추출<br/>
 사용 언어 : javascript<br/>
 
