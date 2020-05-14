@@ -10,30 +10,37 @@
     <div id="container">
       <header>
         <div class="test_title">G9_TEST</div>
-        <div>
-          <label
-            >주민번호입력:
+        <div class="input_wrapper">
+          <!-- <label> -->
+          <div>
             <input
               id="idNumber1"
               class="input_box"
               type="number"
-              placeholder="생년월일 6자리 ex)901231"
+              placeholder="주민번호 앞 6자리 ex) 901231"
               maxlength="6"
               oninput="checkNumberLength(this)"
               autofocus
             />
-            <span> - </span>
+          </div>
+          <span id="hyphen"> - </span>
+          <div>
             <input
               id="idNumber2"
               class="input_box"
               type="number"
-              placeholder="주민번호 뒤 7자리 ex)1234567"
+              placeholder="주민번호 뒤 7자리 ex) 1234567"
               maxlength="7"
               oninput="checkNumberLength(this)"
               style="-webkit-text-security: square;"
             />
-          </label>
-          <button id="submit" type="submit">Submit</button>
+          </div>
+          <!-- </label> -->
+          <!-- <div id="submit_button"> -->
+          <div style="display: table;">
+            <div id="submit">Submit</div>
+          </div>
+          <!-- </div> -->
         </div>
       </header>
       <main>
