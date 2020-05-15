@@ -2,6 +2,8 @@
 
 ### 테스트 과제 클라이언트
 
+-> 클라이언트는 아래 CLIENT URI로 접속하셔서 확인 하시면됩니다. 서버는 배포 전이므로 clone 받으시면 local에서 구동이 됩니다.<br/>
+
 CLIENT URI : https://jch9537.github.io/g9_client/<br/>
 주민번호 유효성 확인 후 네이버 실시간 검색어 추출<br/>
 사용 언어 : javascript<br/>
