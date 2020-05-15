@@ -11,13 +11,7 @@ function api(url, method, data) {
     })
       .then((res) => res.json())
       .then((res) => {
-<<<<<<< HEAD
         if (res.error) {
-=======
-        // console.log("응답겟 ------------------------", res);
-        if (res.error) {
-          //   console.log("에러겟 ------------------------", res.error);
->>>>>>> 2c9a669954b1185c393d7df41632a0dff59e6992
           return Promise.reject(res.error);
         } else {
           return res;
@@ -35,13 +29,7 @@ function api(url, method, data) {
     })
       .then((res) => res.json())
       .then((res) => {
-<<<<<<< HEAD
         if (res.error) {
-=======
-        // console.log("응답포스트 ------------------------", res);
-        if (res.error) {
-          //   console.log("에러포스트 ------------------------", res.error);
->>>>>>> 2c9a669954b1185c393d7df41632a0dff59e6992
           return Promise.reject(res.error);
         } else {
           return res;
@@ -57,11 +45,7 @@ function renderSearchWord(array) {
     const searchItem = document.createElement("li");
     searchItem.className = "search_item";
     for (let key in array[i]) {
-<<<<<<< HEAD
       searchItem.innerHTML = `<div class='search_itemNum'><strong>${key}</strong> </div><div class='search_itemWord'> ${array[i][key]}</div>`;
-=======
-      searchItem.innerHTML = `<span class='search_itemNum'><strong>${key}</strong> </span><span class='serch_itemWord'> ${array[i][key]}</span>`;
->>>>>>> 2c9a669954b1185c393d7df41632a0dff59e6992
     }
     listElement.appendChild(searchItem);
   }
@@ -85,10 +69,6 @@ document.getElementById("submit").addEventListener("click", function () {
     alert("주민번호를 모두 입력해주세요");
   } else {
     const idNumber = idNumber1 + idNumber2;
-<<<<<<< HEAD
-=======
-    //or  api(`/naver/realtime/${idNumber}`, "GET")
->>>>>>> 2c9a669954b1185c393d7df41632a0dff59e6992
     api("/naver/realtime", "POST", idNumber)
       .then((res) => {
         searchTitle.style = "visibility: visible;";
@@ -103,8 +83,3 @@ document.getElementById("submit").addEventListener("click", function () {
     document.getElementById("idNumber2").value = "";
   }
 });
-<<<<<<< HEAD
-=======
-
-//할 것 : 에러 처리 다시확인, 그리드로 스타일링, form으로 처리해보기(label도 확인)
->>>>>>> 2c9a669954b1185c393d7df41632a0dff59e6992

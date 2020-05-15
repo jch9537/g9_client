@@ -214,7 +214,206 @@ main {
 >>>>>>> 2c9a669954b1185c393d7df41632a0dff59e6992
   }
   #hyphen {
-    display: inline;
+    display: inline;@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: "Noto Sans KR", sans-serif;
+    }
+    #container {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 1fr;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: grid;
+      grid-template-rows: 2fr 2fr;
+      width: 100vw;
+      height: 25vh;
+      box-sizing: border-box;
+      background: beige;
+      padding: 0.5em 1em 1.5em 1em;
+      font-size: 2vh;
+    }
+    main {
+      display: grid;
+      grid-template-rows: 1fr 7fr;
+      box-sizing: border-box;
+      background: white;
+      padding: 26vh 10% 3vh 10%;
+    }
+    /* header content*/
+    .test_title {
+      margin: 0em;
+      align-self: center;
+      justify-self: center;
+      font-size: 4vh;
+      font-weight: bold;
+      color: yellowgreen;
+      text-shadow: 0 0 2px black;
+    }
+    .input_wrapper {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      justify-self: center;
+      align-items: center;
+    }
+    .input_box {
+      display: table;
+      box-sizing: border-box;
+      width: 60vw;
+      height: 90%;
+      font-size: 2.2vh;
+    }
+    .input_box::placeholder {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 0.5em;
+      font-size: 1.7vh;
+    }
+    #hyphen {
+      display: none;
+    }
+    #submit {
+      width: 100%;
+      height: 90%;
+    }
+    #submit_button {
+      display: table-cell;
+      background-color: yellowgreen;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 1.8vh;
+      font-weight: 500;
+      color: white;
+    }
+    /* main */
+    .searchWord_title {
+      margin-bottom: 0.6em;
+      visibility: hidden;
+    }
+    #searchWord_list {
+      margin-top: 0;
+      padding-left: 20px;
+      list-style: none;
+    }
+    .search_item {
+      display: grid;
+      grid-template-columns: 1fr 10fr;
+    }
+    .search_itemNum {
+      width: 30px;
+      display: block;
+      color: yellowgreen;
+      text-align: center;
+      margin: 0.02em 1em 0em 0em;
+    }
+    
+    @media all and (orientation: landscape) {
+      header {
+        grid-template-rows: 1fr;
+        grid-template-columns: 1.3fr 6fr;
+        grid-gap: 2em;
+        height: 20vh;
+        padding: 0em 3em;
+      }
+      main {
+        padding-top: 21vh;
+      }
+      /* header content*/
+      .test_title {
+        margin: 0em;
+        font-size: 6vh;
+      }
+      .input_wrapper {
+        height: 10vh;
+        grid-template-rows: 1fr;
+        grid-template-columns: 6fr 0.1fr 6fr 1.5fr;
+        justify-self: unset;
+        align-self: center;
+        justify-items: center;
+      }
+      .input_box {
+        width: 95%;
+        height: 70%;
+        font-size: 5vh;
+      }
+      .input_box::placeholder,
+      #submit_button {
+        font-size: 4vh;
+      }
+      #hyphen {
+        display: inline;
+      }
+      #submit {
+        justify-self: start;
+    
+        width: 80%;
+        height: 70%;
+      }
+    }
+    
+    @media only screen and (min-width: 1025px) {
+      header {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0em;
+        padding: 1em 3em 1em 5em;
+      }
+      .input_wrapper {
+        width: 100%;
+        height: 60px;
+        justify-self: end;
+      }
+      .test_title {
+        justify-self: start;
+      }
+      .input_box {
+        align-self: end;
+        height: 40px;
+        font-size: 2.2vh;
+      }
+      .input_box::placeholder {
+        font-size: 1rem;
+      }
+      #submit {
+        justify-self: center;
+        align-self: end;
+        width: 95%;
+        height: 40px;
+      }
+      #submit_button {
+        align-self: end;
+        vertical-align: end;
+        font-size: 1rem;
+      }
+      /* main */
+      main {
+        padding-top: 25vh;
+      }
+      .searchWord_title {
+        font-size: 2rem;
+        margin-bottom: 1em;
+        margin: 0;
+      }
+      #searchWord_list {
+        padding-left: 40px;
+      }
+      .search_item {
+        display: grid;
+        grid-template-columns: 0.2fr 10fr;
+        font-size: 1rem;
+        margin: 0.3em;
+      }
+      .search_itemWord {
+        font-weight: 500;
+      }
+    }
+    
   }
 <<<<<<< HEAD
   #submit {
