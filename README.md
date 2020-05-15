@@ -9,6 +9,7 @@ CLIENT URI : https://jch9537.github.io/g9_client/<br/>
 1. input 창 작성 글자수 제한
 2. input 창 숫자 이외의 문자입력 제한
 3. 실시간 검색어 렌더
+4. grid를 사용한 반응형 웹
 
 - Server URI : http://localhost:8000
 - Endpoint : /naver/realtime
