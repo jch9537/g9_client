@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>G9 test</title>
+=======
+    <title>G9_test</title>
+>>>>>>> 2c9a669954b1185c393d7df41632a0dff59e6992
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div id="container">
       <header>
+<<<<<<< HEAD
         <div class="test_title">CRAWLER</div>
         <div class="input_wrapper">
           <input
@@ -40,6 +45,47 @@
           실시간 검색어
         </h2>
         <ul id="searchWord_list"></ul>
+=======
+        <div class="test_title">G9_TEST</div>
+        <div class="input_wrapper">
+          <!-- <label> -->
+          <div>
+            <input
+              id="idNumber1"
+              class="input_box"
+              type="number"
+              placeholder="주민번호 앞 6자리 ex) 901231"
+              maxlength="6"
+              oninput="checkNumberLength(this)"
+              autofocus
+            />
+          </div>
+          <span id="hyphen"> - </span>
+          <div>
+            <input
+              id="idNumber2"
+              class="input_box"
+              type="number"
+              placeholder="주민번호 뒤 7자리 ex) 1234567"
+              maxlength="7"
+              oninput="checkNumberLength(this)"
+              style="-webkit-text-security: square;"
+            />
+          </div>
+          <!-- </label> -->
+          <!-- <div id="submit_button"> -->
+          <div style="display: table;">
+            <div id="submit">Submit</div>
+          </div>
+          <!-- </div> -->
+        </div>
+      </header>
+      <main>
+        <h2 class="searchWord_title" style="visibility: hidden;">
+          실시간 검색어
+        </h2>
+        <ul id="searchWord_list" style="list-style: none;"></ul>
+>>>>>>> 2c9a669954b1185c393d7df41632a0dff59e6992
       </main>
     </div>
     <script src="./index.js"></script>
