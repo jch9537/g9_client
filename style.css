@@ -58,7 +58,6 @@ main {
   display: table-cell;
   vertical-align: middle;
   padding-left: 0.5em;
-  /* font-size: 0.3vh; */
   font-size: 1.7vh;
 }
 #hyphen {
@@ -70,7 +69,6 @@ main {
 }
 #submit_button {
   display: table-cell;
-  /* height: 100%; */
   background-color: yellowgreen;
   text-align: center;
   vertical-align: middle;
@@ -106,7 +104,7 @@ main {
     grid-template-columns: 1.3fr 6fr;
     grid-gap: 2em;
     height: 20vh;
-    padding: 0em 2em;
+    padding: 0em 3em;
   }
   main {
     padding-top: 21vh;
@@ -114,13 +112,12 @@ main {
   /* header content*/
   .test_title {
     margin: 0em;
-    font-size: 5.5vh;
+    font-size: 6vh;
   }
   .input_wrapper {
     height: 10vh;
     grid-template-rows: 1fr;
     grid-template-columns: 6fr 0.1fr 6fr 1.5fr;
-    /* grid-gap: 1em; */
     justify-self: unset;
     align-self: center;
     justify-items: center;
@@ -139,10 +136,64 @@ main {
   }
   #submit {
     justify-self: start;
+
     width: 80%;
     height: 70%;
   }
-  /* #submit_button {
-    font-size: 4vh;
-  } */
+}
+
+@media only screen and (min-width: 1025px) {
+  header {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0em;
+    padding: 1em 3em 1em 5em;
+  }
+  .input_wrapper {
+    width: 100%;
+    height: 60px;
+    justify-self: end;
+  }
+  .test_title {
+    justify-self: start;
+  }
+  .input_box {
+    align-self: end;
+    height: 40px;
+    font-size: 2.2vh;
+  }
+  .input_box::placeholder {
+    font-size: 1rem;
+  }
+  #submit {
+    justify-self: center;
+    align-self: end;
+    width: 95%;
+    height: 40px;
+  }
+  #submit_button {
+    align-self: end;
+    vertical-align: end;
+    font-size: 1rem;
+  }
+  /* main */
+  main {
+    padding-top: 25vh;
+  }
+  .searchWord_title {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    margin: 0;
+  }
+  #searchWord_list {
+    padding-left: 40px;
+  }
+  .search_item {
+    display: grid;
+    grid-template-columns: 0.2fr 10fr;
+    font-size: 1rem;
+    margin: 0.3em;
+  }
+  .search_itemWord {
+    font-weight: 500;
+  }
 }
