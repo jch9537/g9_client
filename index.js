@@ -18,6 +18,7 @@ function api(url, method, data) {
         }
       });
   } else {
+    console.log("---------", `${server}${url}`);
     const body = { id: data };
     return fetch(`${server}${url}`, {
       method,
