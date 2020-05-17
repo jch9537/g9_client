@@ -1,4 +1,4 @@
-const server = "http://18.221.37.6:8000";
+const server = "http://localhost:8000";
 //fetch함수
 function api(url, method, data) {
   if (method === "GET") {
