@@ -13,7 +13,7 @@ CLIENT URI : https://jch9537.github.io/g9_client/<br/>
 3. 실시간 검색어 렌더
 4. grid를 사용한 반응형 웹
 
-- Server URI : http://localhost:8000
+- Server URI : http://ec2-18-221-37-6.us-east-2.compute.`amazonaws.com:3000
 - Endpoint : /naver/realtime
 - Resource : IdNumber
 - Method : POST
