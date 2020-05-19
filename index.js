@@ -1,4 +1,4 @@
-const server = "http://ec2-18-221-37-6.us-east-2.compute.amazonaws.com:3000";
+const server = "http://ec2-13-59-133-179.us-east-2.compute.amazonaws.com:3000";
 //fetch함수
 function api(url, method, data) {
   if (method === "GET") {
