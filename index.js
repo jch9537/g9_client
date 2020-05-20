@@ -1,4 +1,4 @@
-const server = "http://ec2-13-59-133-179.us-east-2.compute.amazonaws.com:3000";
+const server = "http://localhost:3000";
 //fetch함수
 function api(url, method, data) {
   if (method === "GET") {
@@ -18,7 +18,7 @@ function api(url, method, data) {
         }
       });
   } else {
-    console.log("---------", `${server}${url}`);
+    console.log("서버 URI : ---------", `${server}${url}`);
     const body = { id: data };
     return fetch(`${server}${url}`, {
       method,

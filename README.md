@@ -13,10 +13,19 @@ CLIENT URI : https://jch9537.github.io/g9_client/<br/>
 3. 실시간 검색어 렌더
 4. grid를 사용한 반응형 웹
 
-- Server URI : http://ec2-13-59-133-179.us-east-2.compute.amazonaws.com:3000
+- Server URI : http://localhost:3000
 - Endpoint : /naver/realtime
 - Resource : IdNumber
 - Method : POST
 - Success Response : { data: data, message: "가져오기 완료" }
 - Error Response : <br/>유효하지 않은 주민번호 일 때 {error: { status: 400, message: "유효한 주민번호가 아닙니다." }},
   <br/>서버오류 { error: { status: 500, message: "서버오류" } }
+
+ <br/>
+ <br/> 
+추가 진행 할 사항:<br/> 
+가로이거나 PC일 경우 10개씩 잘라서 보여주기<br/> 
+에러핸들링 추가<br/> 
+태블릿 반응형 추가<br/>
+폰트 및 서버 https적용<br/>
+배포 : http://ec2-13-59-133-179.us-east-2.compute.amazonaws.com:3000
