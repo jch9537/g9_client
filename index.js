@@ -1,4 +1,4 @@
-const server = "http://18.221.37.6:8000";
+const server = "http://localhost:3000";
 //fetch함수
 function api(url, method, data) {
   if (method === "GET") {
@@ -18,6 +18,7 @@ function api(url, method, data) {
         }
       });
   } else {
+    console.log("서버 URI : ---------", `${server}${url}`);
     const body = { id: data };
     return fetch(`${server}${url}`, {
       method,
